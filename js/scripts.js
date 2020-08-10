@@ -13,7 +13,7 @@ function firstLetterSeperator() {
 function reverseLetters() {
   const reversedLetters = twoLetters.reverse().join("");
   twoReversedLetters.push(reversedLetters); 
-  alert(twoReversedLetters);
+  return(twoReversedLetters);
 }
 
 let twoReversedLetters = [];
@@ -33,7 +33,7 @@ function middleLetter() {
  midLetter = sentence.charAt(middleLetterIndex);
  const letterJoin2 = midLetter + letterJoin;
  scrambledSentence.push(letterJoin2.split("").reverse().join(""));
-alert(scrambledSentence);
+return(scrambledSentence);
 }
 let scrambledSentence = [];
 
