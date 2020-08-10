@@ -33,11 +33,24 @@ function middleLetter() {
  midLetter = sentence.charAt(middleLetterIndex);
  const letterJoin2 = midLetter + letterJoin;
  scrambledSentence.push(letterJoin2.split("").reverse().join(""));
- alert(scrambledSentence);
+alert(scrambledSentence);
 }
-scrambledSentence = [];
+let scrambledSentence = [];
 
 
 
 seperateAndReverse();
 middleLetter();
+
+$(document).ready(function() {
+  $("#cat").click(function() {
+    $("#catDiv").text(sentence)
+    $("#otterDiv").hide();
+    $("#catDiv").show();
+  });
+  $("#otter").click(function() {
+    $("#otterDiv").text(scrambledSentence)
+    $("#catDiv").hide();
+    $("#otterDiv").show();
+  });
+});
